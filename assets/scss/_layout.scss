@@ -1,0 +1,41 @@
+.container-layout {
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  // padding: size(180) size(25) size(25) size(25);
+  position: relative;
+}
+.main {
+  &-header {
+    position: fixed;
+    top: size(25);
+    left: size(25);
+    width: calc(100vw - 50px);
+  }
+  &-filter {
+    background-color: #fff;
+    padding: size(19) size(28);
+    border-radius: size(8);
+  }
+  &-content {
+    position:absolute;
+    width: calc(100vw - 50px);
+    height: calc(100vh - 245px);
+    top: 225px;
+    left: 25px;
+    overflow: auto;
+  }
+  &-row-td {
+    height: 53px;
+    border-radius: size(8);
+    background-color: #fff;
+    margin: 3px 0;
+    .column {
+      padding: 0;
+      @include flex(center, flex-start);
+    }
+    .center-f {
+      @include flex(center, center);
+    }
+  }
+}

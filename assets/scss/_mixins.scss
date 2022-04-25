@@ -1,0 +1,47 @@
+$base-size: 16;
+
+@mixin flex($align-item, $justify-content) {
+  display: flex;
+  align-items: $align-item;
+  justify-content: $justify-content;
+}
+
+@function size($target, $context: $base-size) {
+  @return ($target / $context) * 1rem;
+}
+
+@for $i from 1 through 40 {
+  .fz-#{$i} {
+      font-size: size($i);
+  }
+}
+
+@for $i from 0 through 50 {
+  .mt--#{$i} {
+      margin-top: size($i);
+  }
+  .mb--#{$i} {
+      margin-bottom: size($i);
+  }
+  .ml--#{$i} {
+      margin-left: size($i);
+  }
+  .mr--#{$i} {
+      margin-right: size($i);
+  }
+  .pt--#{$i} {
+      padding-top: size($i);
+  }
+  .pb--#{$i} {
+      padding-bottom: size($i);
+  }
+  .pl--#{$i} {
+      padding-left: size($i);
+  }
+  .pr--#{$i} {
+      padding-right: size($i);
+  }
+}
+.flex {
+  display: flex;
+}
