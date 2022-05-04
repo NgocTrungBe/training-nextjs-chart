@@ -3,15 +3,21 @@ import {
   configureStore,
   ThunkAction,
 } from '@reduxjs/toolkit';
-import counterReducer from '@src/redux/counterSlice';
-import kanyeReducer from '@src/redux/kanyeSlice';
+import stockReducer from '@src/redux/stockSlice';
+import newsReducer from '@src/redux/newsSlice';
+
+
+
 
 
 export const store = configureStore({
   reducer: {
-    counter: counterReducer,
-    kanyeQuote: kanyeReducer,
+    stock: stockReducer,
+    news: newsReducer,
+    
   },
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({serializableCheck:false})
 });
 
 export type AppDispatch = typeof store.dispatch;

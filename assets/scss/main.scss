@@ -2,35 +2,37 @@
 @import './mixins';
 @import './component';
 @import './layout';
-
 body {
-  font-family: "Montserrat", "Roboto", "Noto Sans", sans-serif;
-  font-size: size(13);
-  color: #000000;
+    font-family: "Roboto", "Noto Sans", sans-serif;
+    font-size: size(13);
+    color: #000000;
 }
 
 html {
-  font-size: 100%;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
-  background: #E5E5E5;
-  ul, p {
-    padding: 0;
-  }
-  @media only screen and (max-width: 768px) {
-    font-size: 75%;
-  }
+    font-size: 62.5%;
+    word-spacing: 1px;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+    background: #E5E5E5;
+    ul,
+    p {
+        padding: 0;
+    }
+    @media only screen and (max-width: 768px) {
+        font-size: 63%;
+    }
 }
+
 * {
-  font-family: "Montserrat", "Roboto", "Noto Sans", sans-serif !important;
+    font-family: "Roboto", "Noto Sans", sans-serif;
 }
+
 *,
 *::before,
 *::after {
-  box-sizing: border-box !important;
-  margin: 0;
+    box-sizing: border-box !important;
+    margin: 0;
 }
